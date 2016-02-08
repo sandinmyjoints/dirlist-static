@@ -7,8 +7,8 @@ var dirlist = require('./lib/index');
 
 var indexFile = 'index.html';
 
-fs.writeFileSync(indexFile, '<html><body>')
+process.stdout.write('<html><body>\n');
 
-fs.appendFileSync(indexFile, dirlist(argv));
+process.stdout.write(dirlist(argv));
 
-fs.appendFileSync(indexFile, '\n</body></html>\n')
+process.stdout.write('\n</body></html>\n');
